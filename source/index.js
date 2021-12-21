@@ -3,8 +3,6 @@ let mydata = "No Details";
 let app = Vue.createApp({
     data: function () {
         return {
-            greeting: "Hello, world",
-            myname: "Tony",
             movies: [],
             inList: true
         };
