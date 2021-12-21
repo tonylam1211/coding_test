@@ -1,0 +1,210 @@
+[v-cloak] {
+    display: none;
+}
+
+#tHeading {
+    text-align: center;
+    margin: 2%;
+}
+
+#switchView {
+    position: relative;
+    float: right;
+}
+
+.listMovies {
+    display: flex;
+    width: 90%;
+    min-height: 202px;
+    background-color: #F3F6FF;
+    margin-top: 12px;
+    list-style-type: none;
+    padding: 8px;
+    border: 2px solid #61614b;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #616161;
+}
+
+.listMovies .mposter {
+    height: 180px;
+    width: 128px;
+    border-radius: 4px;
+}
+
+.listMovies .mdetails {
+    margin-left: 2%;
+}
+
+.listMovies .comm_rating {
+    display: flex;
+    gap: 1em;
+}
+
+.listMovies .stars-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.listMovies .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.listMovies .stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+}
+
+.listMovies .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f8ce0b;
+}
+
+.listMovies .ratingFormat {
+    display: flex;
+    gap: 10px;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f5a320;
+    font-weight: 900;
+}
+
+.listMovies .mycount {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.listMovies #movieName {
+    font-size: 40px;
+    font-family: 'Noto Serif TC', serif;
+    color: #020336;
+}
+
+@media screen and (max-width: 950px) {
+    .listMovies .ratingFormat, .listMovies .mycount {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .listMovies {
+        display: flex;
+        width: 90%;
+        height: 190px;
+        background-color: #F3F6FF;
+        margin-top: 12px;
+        list-style-type: none;
+        padding: 8px;
+        border: 2px solid #61614b;
+        border-radius: 8px;
+        color: #616161;
+    }
+
+    .listMovies .comm_rating {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .listMovies .mdetails, .listMovies .ratingFormat, .listMovies .mycount {
+        font-size: 14px;
+    }
+
+    .listMovies .mposter {
+        height: 180px;
+        width: 128px;
+        border-radius: 4px;
+    }
+
+    .listMovies #movieName {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .listMovies #movieName {
+        font-size: 26px;
+    }
+}
+
+.gridul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridMovies {
+    box-sizing: border-box;
+    border: 1px solid #0933ec3b;
+    border-radius: 10px;
+    list-style-type: none;
+    text-align: center;
+    flex: 0 0 20rem;
+    margin: 3%;
+}
+
+.gridul .mposter {
+    height: 350px;
+    width: 248px;
+    margin: 10px;
+}
+
+.gridul .mdetails {
+    padding: 10px;
+}
+
+.gridMovies .stars-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.gridMovies .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gridMovies .stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+}
+
+.gridMovies .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f8ce0b;
+}
+
+.gridMovies .ratingFormat {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f5a320;
+    font-weight: 900;
+    justify-content: center;
+}
+
+.gridMovies .mycount {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gridMovies #movieName {
+    font-size: 20px;
+}

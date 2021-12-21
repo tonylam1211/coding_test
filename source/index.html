@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies' Details</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <h1 id="tHeading"> Movies from Tony <button id="switchView" type="button" class="btn btn-info"
+                @click="switchView()">Switch View</button> </h1>
+        <hr />
+        <ul :class="[inList ? 'listul' : 'gridul']">
+            <li v-for="movie in movies" :class="[inList ? 'listMovies' : 'gridMovies']">
+                <img class="mposter" :src="movie.poster" onerror="this.onerror=null; this.src='default_img_cut.png';"
+                    alt="movie image" />
+                <div class="mdetails">
+                    <p id="movieName">{{ movie.name }}</p>
+                    <p id="movieDuration">Duration: {{ movie.duration }} minutes</p>
+                    <div class="comm_rating">
+                        <div class="ratingFormat">
+                            <p id="myrating">Rating: {{ getRoundrating(movie.rating) }}</p>
+                            <div class="stars-outer">
+                                <div class="stars-inner" :style="{width: (movie.rating/5 * 100) +'%'}"></div>
+                            </div>
+                        </div>
+                        <div class="mycount">
+                            <p><i class="fa fa-thumbs-up"></i> Like: {{ movie.likeCount }}</p>
+                            <p><i class="fas fa-comment"></i> Comment: {{ movie.reviewCount }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="index.js"></script>
+
+</html>
